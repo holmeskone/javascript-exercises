@@ -14,12 +14,16 @@ const sum = function(array) {
   return sum;
 };
 
-const multiply = function() {
-
+const multiply = function(array) {
+  let multiple = 1;
+	array.forEach(number => {
+    multiple *= number;
+  });
+  return multiple;
 };
 
-const power = function() {
-	
+const power = function(a,b) {
+  return (Math.pow(a,b));
 };
 
 const factorial = function() {

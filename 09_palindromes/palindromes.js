@@ -1,8 +1,8 @@
 const palindromes = (text) => {
     const words = text // Split each text into words
         .toLowerCase()
-        .replace(/[^\w\s]/g, '')
-        .split(/\s+/);
+        .replace(/[^\w\s]/g, '') // Remove all punctuation
+        .split(/\s+/); // Split by one or more spaces
 
     const letters = words
         .join('');

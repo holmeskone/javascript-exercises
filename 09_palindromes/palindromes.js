@@ -6,19 +6,18 @@ const palindromes = (text) => {
     const letters = words
         .join('');
 
-    console.log((words));
-
     for (let i=0; i<letters.length; i++){
-
+        if(letters[i]===letters[letters.length -1 - i]){
+            return true;
+        }
+        console.log(letters[i]);
+        console.log(letters[letters.length -1 - i]);
     }
-
-
 
 };
 
 // Do not edit below this line
 module.exports = palindromes;
-
 
 /*
 Check - Get the text

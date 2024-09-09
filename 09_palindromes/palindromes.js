@@ -1,7 +1,8 @@
 const palindromes = (text) => {
     const words = text // Split each text into words
         .toLowerCase()
-        .split(/[ ,\.]+/);
+        .replace(/[^\w\s]/g, '')
+        .split(/\s+/);
 
     const letters = words
         .join('');
@@ -10,9 +11,10 @@ const palindromes = (text) => {
         if(letters[i]===letters[letters.length -1 - i]){
             return true;
         }
-        console.log(letters[i]);
-        console.log(letters[letters.length -1 - i]);
+        // console.log(letters[i] + 'is the' + [i] + 'character of letters');
+        // console.log(letters[letters.length -1 - i] + 'is the' + [letters.length -1 - i] + 'character of letters');
     }
+    console.log(words);
 
 };
 

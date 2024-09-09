@@ -8,14 +8,11 @@ const palindromes = (text) => {
         .join('');
 
     for (let i=0; i<letters.length; i++){
-        if(letters[i]===letters[letters.length -1 - i]){
-            return true;
+        if(letters[i]!==letters[letters.length -1 - i]){
+            return false;
         }
-        // console.log(letters[i] + 'is the' + [i] + 'character of letters');
-        // console.log(letters[letters.length -1 - i] + 'is the' + [letters.length -1 - i] + 'character of letters');
     }
-    console.log(words);
-
+    return true;
 };
 
 // Do not edit below this line
